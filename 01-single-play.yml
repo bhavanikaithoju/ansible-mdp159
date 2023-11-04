@@ -1,0 +1,13 @@
+# ansible n4 -m file -a "path=/home/centos/n4_dir state=directory"
+# playbook with single play and single task
+
+---
+- name: Update Node4
+  hosts: n4
+  
+  tasks:
+  - name: Create n4 directory
+    file:
+      path: /home/centos/n4_dir
+      state: directory
+...
