@@ -1,0 +1,29 @@
+#copy the os.html from master to apropriate nodes with their names
+#scp
+
+---
+
+- name: Setup apache web server
+  hosts: all
+  become: yes
+  vars:
+    user_name: ravi
+  tasks:
+  - name: copy on CentOS
+    template:
+      src: custom.j2
+      dest: /var/www/html/centos.html
+    when: ansible_distribution == "CentOS"
+
+  - name: copy on Amazon
+    template:
+      src: custom.j2
+      dest: /var/www/html/amazon.html
+    when: ansible_distribution == "Amazon"
+
+  - name: copy on Ubuntu
+    template:
+      src: custom.j2
+      dest: /var/www/html/ubuntu.html
+    when: ansible_distribution == "Ubuntu"
+...   
