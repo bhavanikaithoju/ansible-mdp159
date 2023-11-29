@@ -1,0 +1,13 @@
+# ansible n5 -m file -a "path=/home/centos/n5_dir state=directory"
+# playbook with single play and single task
+
+---
+- name: Update Node5
+  hosts: n5
+  
+  tasks:
+  - name: Create n5 directory
+    file:
+      path: /home/centos/n5_dir
+      state: directory
+...
