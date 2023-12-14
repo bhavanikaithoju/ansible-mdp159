@@ -1,6 +1,6 @@
 ---
 - name: Setup apache web server
-  hosts: httpd
+  hosts: all
   become: yes
 
   tasks:

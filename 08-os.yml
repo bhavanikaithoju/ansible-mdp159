@@ -1,4 +1,4 @@
-#copy the os.html from master to apropriate nodes with their names
+#copy ithe os.html from master to apropriate nodes with their names
 #scp
 
 ---

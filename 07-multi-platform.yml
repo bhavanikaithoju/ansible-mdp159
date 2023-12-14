@@ -1,5 +1,4 @@
 ---
-
 - name: Setup apache web server
   hosts: all
   become: yes
