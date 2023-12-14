@@ -1,0 +1,16 @@
+#copy the os.html from master to apropriate nodes with their names
+#scp
+
+---
+
+- name: Setup apache web server
+  hosts: all
+  
+  tasks:
+  - name: copy on CentOS
+    template:
+      src: db_props.j2
+      dest: /home/centos/db.prop
+    when: ansible_distribution == "CentOS"
+
+...   
